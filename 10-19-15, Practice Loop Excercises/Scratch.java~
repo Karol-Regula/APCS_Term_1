@@ -1,0 +1,44 @@
+public class Loops{
+    public static void main(String[]arrgs){
+	// 1. --------------------------------
+	/*
+	for(int x = 1; x < 21; x++){
+	    System.out.println(x);
+	}
+	*/
+	// 2. --------------------------------
+	/*
+	for(int x = 2; x < 21; x+=2){
+	    System.out.println(x);
+	}
+	*/
+	// 3. --------------------------------
+	/*
+	for(int x = 3; x < 21; x+=3){
+	    System.out.println(x);
+	}
+	*/
+	// 4. --------------------------------
+	/*
+	for(int x = 1; x < 21; x+=2){
+	    System.out.println(x*x);
+	}
+	*/
+	// 5. --------------------------------
+	/*
+	String out = "";
+	for(int x = 1; x < 20; x+=1){
+	    out += x;
+	    out += " + ";
+	}
+	System.out.println(out += 20);
+	*/
+	// 6. --------------------------------
+	int sum = 0;
+	for(int x = 1; x < 21; x+=2){
+	    System.out.println(x+sum);
+	    sum+=x;
+	}
+	// 7. --------------------------------
+    }
+}

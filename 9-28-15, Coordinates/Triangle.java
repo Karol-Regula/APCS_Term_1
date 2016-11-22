@@ -1,0 +1,52 @@
+public class Triangle{
+    private Coordinate v1;
+    private Coordinate v2;
+    private Coordinate v3;
+    //Instance Variables
+
+    //default constructor
+    public Triangle(){}
+    //Coordinate taking constructor
+    public Triangle(Coordinate a, Coordinate b, Coordinate c){
+	v1=a;
+	v2=b;
+	v3=c;
+	//better practice to make new coordinates, with a.getX and Y
+	//use getX/getY to get individual values
+    }
+    //double/manual input point taking constructor
+    public Triangle(double x1,double y1,double x2,double y2,double x3,double y3){
+	v1 = new Coordinate(x1,y1);
+	v2 = new Coordinate(x2,y2);
+	v3 = new Coordinate(x3,y3);
+    }
+
+    public String toString(){
+        return "V1:"+v1+" V2:"+v2+" V3:"+v3;
+    }
+
+    public double getPerimeter(){
+        return v1.dist(v2)+v2.dist(v3)+v3.dist(v1);
+    }
+
+    public double getArea(){
+	double s;
+	s = getPerimeter()/2;
+	return Math.sqrt((s)*
+			 (s-v1.dist(v2))*
+			 (s-v2.dist(v3))*
+			 (s-v3.dist(v1)));
+    }
+    //this is sometimes wrong because of precision problems
+    public boolean isRight(){
+        double a;
+	double b;
+	double c;
+	a = v1.dist(v2);
+	b = v2.dist(v3);
+	c = v3.dist(v1);
+	System.out.println(a+" "+b+" "+c);
+	return a*a+b*b==c*c || b*b+c*c==a*a || a*a+c*c==b*b;
+    }
+
+}

@@ -1,0 +1,9 @@
+public class Convert{
+    public static void main(String[]args){
+	int[] nums = new int[10];
+    }
+    
+    public static int[][] convert(int[] data, int rows, int cols){
+	//length of data == rows * cols
+    }
+}

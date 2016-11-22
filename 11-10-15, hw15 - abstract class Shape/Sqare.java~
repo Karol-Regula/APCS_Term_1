@@ -1,0 +1,24 @@
+public class Square extends Rectangle{
+    
+    public Square(){
+	super();
+    }
+
+    public Square(double side){
+	super(side,side);
+    }
+
+    public void setLength(double whatLength){
+	length = whatLength;
+	width = whatLength;
+    }
+
+    public void setWidth(double whatWidth){
+	width = whatWidth;
+	length = whatWidth;
+    }
+
+    public String toString(){
+	return "A Square with a side = "+getLength()+", which is a subclass of "+super.toString();
+    }
+}

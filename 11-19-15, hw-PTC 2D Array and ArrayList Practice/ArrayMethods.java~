@@ -1,0 +1,73 @@
+public class ArrayMethods{
+    
+    //make a method that generates a 2d array with random lengths and values
+    public static void main(String[]args){
+	int[][] nums = new int[3][6];//3 arrays of 6
+	fillArray2d(nums);
+	printArray2d(nums);
+	System.out.println(max(nums));//works
+	System.out.println(rowSum(nums, 0));//works
+	System.out.println(columnSum(nums, 0));
+    }
+    
+    public static int max(int[][] data){
+	//returns max value in array
+	int max = 0;
+	for (int i = 0; i < data.length; i++){
+	    for (int j = 0; j < data[i].length; j++){
+		if (data[i][j] > max){
+		    max = data[i][j];
+		}
+	    }
+	}
+	return max;
+    }
+
+    public static int rowSum(int[][] data, int n){
+	//returns sum of elements in row n
+	int count = 0;
+	for (int j = 0; j < data[n].length; j++){
+	    count += data[n][j];
+	}
+	return count;
+    }
+    
+    public static int columnSum(int[][] data, int n){
+	//returns sum of elements in column n
+	//watches out for short rows
+	int count = 0;
+	for (int i = 0; i < data.lenght; i++){
+	    if (data[i].length > n){
+		count += data[i][n];
+	    }
+	}
+	return count;
+    }
+
+    public static int[] allRowSums(int[][] data){
+	//calculates the row sum for every row, returns in an array.
+	for (int i = 0; i < data.length; i++){
+	    
+	    //use rowSum()
+	}
+    }
+
+    //auxiliary methods for testing----------------------
+    public static void fillArray2d(int[][] data){
+	for (int i = 0; i < data.length; i++){
+	    for (int j = 0; j < data[i].length; j++){
+		data[i][j] = (int)(Math.random() * 10);
+	    }
+	}
+    }
+    
+    public static void printArray2d(int[][] data){
+	for (int i = 0; i < data.length; i++){
+	    for (int j = 0; j < data[i].length; j++){
+		System.out.print(data[i][j]+" ");
+	    }
+	    System.out.println();
+	}
+    }
+}
+    
